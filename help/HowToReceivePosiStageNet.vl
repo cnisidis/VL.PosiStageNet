@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="OJz68wfusAYQc2dhsDXCGG" LanguageVersion="2021.4.8.904" Version="0.128">
+  <Patch Id="Qu0a5PxC8k4LzFlf28JM7N">
+    <Canvas Id="FtJzZWJ1n83PKhbjyzAhxs" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="BdTVpv8EnhwPP3hRf0Bkyk">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="FLij8KmaexfQKSPpcAT6DO">
+        <Canvas Id="A1G0KliCrsAQDxuVOlHP7F" CanvasType="Group">
+          <Node Bounds="104,209,67,19" Id="Bn7gCJQZ4cBPnbuBuxUwkz">
+            <p:NodeReference LastCategoryFullName="VL.PosiStageNet" LastSymbolSource="VL.PosiStageNet.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="PSNReceive" />
+            </p:NodeReference>
+            <Pin Id="N3k0yN18YvuNuDyFUpBKXe" Name="LocalIP" Kind="InputPin" />
+            <Pin Id="FVuc1xvSiqRON8OyfHZn1s" Name="Start" Kind="InputPin" />
+            <Pin Id="CNRO8ZGoAeDO6hSiPT5ghT" Name="Stop" Kind="InputPin" />
+            <Pin Id="BR3JMGGM7nwP5Qjx7zntcw" Name="PSNClient" Kind="OutputPin" />
+            <Pin Id="GvzSCtKyO2RMjfpPmWW3GV" Name="Is Listening" Kind="OutputPin" />
+          </Node>
+          <Pad Id="HGbVQtmDlOnOBiIJkDBAdW" Comment="LocalIP" Bounds="101,41,90,15" ShowValueBox="true" isIOBox="true" Value="192.168.1.100">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="FsaCqPc99HpMHeQ7YvaTig" Comment="Start" Bounds="139,84,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LQE11Ln9nDINjOBHlnQgXQ" Comment="Stop" Bounds="168,138,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="QTloRWP1yLLOVBLXWHmeda" Comment="Is Listening" Bounds="168,262,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="106,390,65,19" Id="T0fRxpO0K2nQF1M3sQNO4f">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="JBk9A08GdZ8OMDnB610XA5" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="AkRwSVNIAHgORuhdSBij8v" Name="Reset" Kind="InputPin" />
+            <Pin Id="RBavToFJx6zPmMK1IW07bo" Name="Value" Kind="OutputPin" />
+            <Pin Id="B5GjSyGqCnFNW610Xd6L5O" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="93,504,149,115" Id="DCPwu1nljOsLFjOQMRBs9z">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <Pin Id="GB7n9YHlz3iPOn2XzjDQpB" Name="Break" Kind="OutputPin" />
+            <ControlPoint Id="Ob94K2XNeQvPTavRvXP6RN" Bounds="108,511" Alignment="Top" />
+            <ControlPoint Id="CsydnwDi6tdP1NbnKgxkdQ" Bounds="126,613" Alignment="Bottom" />
+            <Patch Id="DirZp2FnxOHLo2Gsh5ve3R" ManuallySortedPins="true">
+              <Patch Id="MsTiDB5dRC8Omecst3kHww" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="REYV2zqztMBOLPcGRfWCrO" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="V2N5dA1FkHYMQEcfq75tk5" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="105,536,125,26" Id="BBYLhIXtD7xPKSoJigj2UC">
+                <p:NodeReference LastCategoryFullName="VL.PosiStageNet.Tracker" LastSymbolSource="VL.PosiStageNet.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="RecordType" Name="Tracker" />
+                  <Choice Kind="OperationCallFlag" Name="Split" />
+                </p:NodeReference>
+                <Pin Id="DqmCSSXFJCmOums0AM3pJz" Name="Input" Kind="StateInputPin" />
+                <Pin Id="LnyTLW1avvoLU7cS4EEkBI" Name="ID" Kind="OutputPin" />
+                <Pin Id="VspifGIM5VrMz8hGSFxJo6" Name="Name" Kind="OutputPin" />
+                <Pin Id="ANgZaWDXhx0NNZVPHYHidk" Name="Position" Kind="OutputPin" />
+                <Pin Id="JZH981FZytvNy9V8pMFDlI" Name="Orientation" Kind="OutputPin" />
+                <Pin Id="FTHrzoQuuf5N9HhZhKg4WR" Name="Speed" Kind="OutputPin" />
+                <Pin Id="T6HuDM7BowlPppNGGq3Je2" Name="Acceleration" Kind="OutputPin" />
+                <Pin Id="CnaYdC6tVXpOuqCPy2nigW" Name="TargetPosition" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="Lku5q0iKWK5MWsVGICNFoG" Bounds="107,613" Alignment="Bottom" />
+            <ControlPoint Id="SfROSRCoijIPyRZ1fJ1yen" Bounds="148,613" Alignment="Bottom" />
+          </Node>
+          <Pad Id="TiZrxLK72RnMUv1YrMPHqi" Comment="Trackers Names" Bounds="128,666,105,165" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="104,311,88,19" Id="URSbZ599I0LNLwLrI4wI9O">
+            <p:NodeReference LastCategoryFullName="VL.PosiStageNet" LastSymbolSource="VL.PosiStageNet.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetPSNTrackers" />
+            </p:NodeReference>
+            <Pin Id="LkrntRes561PFRBpv4noai" Name="Input" Kind="InputPin" />
+            <Pin Id="Cj43IQktGohQOF3SJyam3H" Name="PSNTrackers" Kind="OutputPin" />
+          </Node>
+          <Pad Id="KXRcb49gmhnNkctQlGYJRM" Comment="" Bounds="69,674,35,95" ShowValueBox="true" isIOBox="true" Value="0" />
+          <Pad Id="O7OZtfMC2HnMPPSgKOUb5L" Comment="" Bounds="325,661,132,186" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item>0, 0, 0</Item>
+            </p:Value>
+          </Pad>
+        </Canvas>
+        <Patch Id="CxVPLjyyUSvOwY10sH2Fdt" Name="Create" />
+        <Patch Id="TrmJNY53emBPpIZG1dAaXc" Name="Update" />
+        <ProcessDefinition Id="LI4TJl5WS1xNjIvhi2zsXw">
+          <Fragment Id="QMnnxSu9plyN81g6YCC4P8" Patch="CxVPLjyyUSvOwY10sH2Fdt" Enabled="true" />
+          <Fragment Id="Ak0oIc0XaszL8Zcb5ivgKF" Patch="TrmJNY53emBPpIZG1dAaXc" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="EWIUaKzoV82L24zjyLgUbh" Ids="HGbVQtmDlOnOBiIJkDBAdW,N3k0yN18YvuNuDyFUpBKXe" />
+        <Link Id="MFiMxx3DW3sMhbbbBsqFfX" Ids="FsaCqPc99HpMHeQ7YvaTig,FVuc1xvSiqRON8OyfHZn1s" />
+        <Link Id="Nkxl5XE021cMtKEBdVAqFs" Ids="LQE11Ln9nDINjOBHlnQgXQ,CNRO8ZGoAeDO6hSiPT5ghT" />
+        <Link Id="J0KDbozI12uMDzTw1IpweX" Ids="GvzSCtKyO2RMjfpPmWW3GV,QTloRWP1yLLOVBLXWHmeda" />
+        <Link Id="FgDx3F9hM4ZQdiTfVKumXX" Ids="RBavToFJx6zPmMK1IW07bo,Ob94K2XNeQvPTavRvXP6RN" />
+        <Link Id="KeTwZeCqqNkLa9jzmT0evq" Ids="CsydnwDi6tdP1NbnKgxkdQ,TiZrxLK72RnMUv1YrMPHqi" />
+        <Link Id="Ke6T0dFh8p6PIVjIMkyjpv" Ids="BR3JMGGM7nwP5Qjx7zntcw,LkrntRes561PFRBpv4noai" />
+        <Link Id="QkawbINJBg0QEwC6SgrAA3" Ids="Cj43IQktGohQOF3SJyam3H,JBk9A08GdZ8OMDnB610XA5" />
+        <Link Id="DI6pJSSVAeSLWN26eQt6do" Ids="Ob94K2XNeQvPTavRvXP6RN,DqmCSSXFJCmOums0AM3pJz" />
+        <Link Id="KVvHE638qYEN3Y0YZabvoy" Ids="VspifGIM5VrMz8hGSFxJo6,CsydnwDi6tdP1NbnKgxkdQ" />
+        <Link Id="LNa18Q4VlmlPedfIylBnT8" Ids="LnyTLW1avvoLU7cS4EEkBI,Lku5q0iKWK5MWsVGICNFoG" />
+        <Link Id="AjTPal0C1HqQcnmTpoisnx" Ids="Lku5q0iKWK5MWsVGICNFoG,KXRcb49gmhnNkctQlGYJRM" />
+        <Link Id="UxY63kfed8EPb3Ub2tp2Ru" Ids="ANgZaWDXhx0NNZVPHYHidk,SfROSRCoijIPyRZ1fJ1yen" />
+        <Link Id="P63166qDy2jMNlCSrVUJYy" Ids="SfROSRCoijIPyRZ1fJ1yen,O7OZtfMC2HnMPPSgKOUb5L" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="QPiNheWmIUgQdJLXPyTasS" Location="VL.CoreLib" Version="2021.4.8-0904-gc031d9d7a6" />
+  <NugetDependency Id="MbtEOWMckdPMEFqixTM7mP" Location="VL.PosiStageNet" Version="0.0.0.0" />
+</Document>
